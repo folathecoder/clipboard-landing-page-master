@@ -1,0 +1,69 @@
+html {
+  background-color: white;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  background-image: url(images/bg-header-desktop.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  max-width: 100%;
+  height: 100vh;
+  margin: 0px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: "Bai Jamjuree", sans-serif;
+  color: #4c545d;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-family: "Bai Jamjuree", sans-serif;
+  color: #4c545d;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  background-color: #26baa4;
+  padding: 20px 30px;
+  border-radius: 50px;
+}
+
+.hero1 {
+  max-width: 100%;
+  min-height: 500px;
+}
+
+.hero1__container {
+  max-width: 800px;
+  min-height: 500px;
+  background-color: yellow;
+  margin: 0px auto;
+}
+
+.hero1 {
+  text-align: center;
+  margin: 0px 10px;
+}
+
+.hero1__area1 {
+  min-height: 250px;
+  background-color: pink;
+  padding: 50px 0px;
+}
+
+.hero1__area1 p {
+  margin-top: -30px;
+}
+
+.hero1__area2 {
+  min-height: 250px;
+  background-color: #70ac7a;
+}
+/*# sourceMappingURL=style.css.map */
