@@ -55,6 +55,18 @@ h3 {
   color: #4c545d;
 }
 
+@media screen and (max-width: 550px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
 p {
   font-size: 1.2rem;
   line-height: 2rem;
@@ -204,6 +216,7 @@ p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin: 50px 0px;
 }
 
 .hero2__area1 {
@@ -246,7 +259,135 @@ p {
   margin-top: 50px;
 }
 
+@media screen and (max-width: 550px) {
+  .feature {
+    padding: 0px 30px;
+    text-align: center;
+  }
+}
+
 .feature p {
   margin-top: -15px;
+}
+
+.hero3 {
+  max-width: 1000px;
+  margin: -50px auto 0px auto;
+  text-align: center;
+}
+
+.hero3__heading {
+  min-height: 150px;
+  padding: 50px 120px;
+}
+
+@media screen and (max-width: 992px) {
+  .hero3__heading {
+    padding: 20px 120px;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .hero3__heading {
+    padding: 20px 60px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero3__heading {
+    padding: 20px 30px;
+  }
+}
+
+.hero3__image {
+  min-height: 0px;
+  padding: 40px 0px;
+}
+
+.hero3__image img {
+  width: 95%;
+}
+
+.hero4 {
+  max-width: 1200px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.hero4__heading {
+  padding: 20px 40px;
+}
+
+.hero4__features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 0px;
+  margin-top: -20px;
+}
+
+@media screen and (max-width: 992px) {
+  .hero4__features {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.icons {
+  padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (max-width: 786px) {
+  .icons {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 262px;
+            flex: 1 262px;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .icons__feature3 {
+    padding: 10px 150px;
+  }
+}
+
+@media screen and (max-width: 602px) {
+  .icons__feature3 {
+    padding: 10px 20px;
+  }
+}
+
+.hero5 {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .hero5 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.sponsor {
+  padding: 30px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .sponsor {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 240px;
+            flex: 1 240px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

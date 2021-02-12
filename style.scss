@@ -11,8 +11,13 @@
             @content;
         }
     } 
-    @else if $size == tablet-mino {
+    @else if $size == tablet-mini {
         @media screen and (max-width: 786px) {
+            @content;
+        }
+    } 
+    @else if $size == large-mobile {
+        @media screen and (max-width: 602px) {
             @content;
         }
     } 
@@ -77,6 +82,14 @@ h3 {
     font-size: 1.5rem;
     font-family: $font-family;
     color: $color-accent-3;
+
+    @include media-query(mobile) {
+        font-size: 1.5rem;
+    }
+
+    @include media-query(mobile) {
+        font-size: 1.3rem;
+    }
 }
 p {
     font-size: 1.2rem;
@@ -207,6 +220,7 @@ p {
     // background-color: red;
     display: flex;
     flex-wrap: wrap;
+    margin: 50px 0px;
 
     &__area1 {
         flex: 1;
@@ -240,7 +254,104 @@ p {
     padding: 0px 60px;
     margin-top: 50px;
 
+    @include media-query (mobile) {
+        padding: 0px 30px;
+        text-align: center;
+    }
+
     p {
         margin-top: -15px;
+    }
+}
+
+
+.hero3 {
+    max-width: 1000px;
+    margin: -50px auto 0px auto;
+    text-align: center;
+
+    &__heading {
+        min-height: 150px;
+        padding: 50px 120px;
+        @include media-query (tablet) {
+            padding: 20px 120px;
+        }
+        @include media-query (tablet-mini) {
+            padding: 20px 60px;
+        }
+        @include media-query (mobile) {
+            padding: 20px 30px;
+        }
+    }
+    &__image {
+        min-height: 0px;
+        padding: 40px 0px;
+        img {
+            width: 95%;
+        }
+    }
+}
+
+
+.hero4 {
+    max-width: 1200px;
+    // background-color: red;
+    margin: 0px auto;
+    text-align: center;
+
+    &__heading {
+        // background-color: yellow;
+        padding: 20px 40px;
+
+
+    
+    }
+    &__features {
+        display: flex;
+        padding: 30px 0px;
+        margin-top: -20px;
+
+        @include media-query (tablet) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.icons {
+    padding: 20px;
+    flex: 1;
+    @include media-query (tablet-mini) {
+        flex: 1 262px;
+    }
+
+    &__feature3 {
+
+        @include media-query (tablet-mini) {
+            padding: 10px 150px;
+        }
+
+        @include media-query (large-mobile) {
+            padding: 10px 20px;
+        }
+    }
+}
+
+.hero5 {
+    // background-color: red;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    text-align: center;
+    @include media-query(tablet) {
+        flex-wrap: wrap;
+    }
+
+
+}
+.sponsor {
+    padding: 30px 0px;
+    flex: 1;
+    @include media-query(tablet) {
+        flex: 1 240px;
     }
 }
