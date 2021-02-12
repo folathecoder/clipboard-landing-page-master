@@ -355,3 +355,16 @@ p {
         flex: 1 240px;
     }
 }
+
+.hero6 {
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 50px 20px 100px 20px;
+
+    &__heading {
+        padding: 0px 20px;
+    }
+
+
+}
