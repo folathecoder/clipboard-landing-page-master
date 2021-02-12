@@ -1,3 +1,28 @@
+//media-queries
+
+@mixin media-query ($size) {
+    @if $size == desktop {
+        @media screen and (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $size == tablet {
+        @media screen and (max-width: 992px) {
+            @content;
+        }
+    } 
+    @else if $size == tablet-mino {
+        @media screen and (max-width: 786px) {
+            @content;
+        }
+    } 
+    @else if $size == mobile {
+        @media screen and (max-width: 600px) {
+            @content;
+        }
+    } 
+
+}
 //colors
 $color-accent-1: hsl(171, 66%, 44%);
 $color-accent-2: hsl(233, 100%, 69%);
@@ -26,21 +51,47 @@ h1 {
     font-size: 3rem;
     font-family: $font-family;
     color: $color-accent-3;
+
+    @include media-query(mobile) {
+        font-size: 1.7rem;
+    }
+}
+h2 {
+    font-size: 2.2rem;
+    font-family: $font-family;
+    color: $color-accent-3;
+
+    @include media-query(mobile) {
+        font-size: 1.5rem;
+    }
 }
 p {
     font-size: 1.2rem;
     line-height: 2rem;
+    font-weight: 400;
     font-family: $font-family;
-    color: $color-accent-3;  
+    color: $color-accent-4;  
+
+    @include media-query(mobile) {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+    }
 }
 .btn {
     text-decoration: none;
     color: $color-accent-5;
     font-size: 1rem;
+    font-weight: 800;
     background-color: $color-accent-1;
-    padding: 20px 30px;
+    padding: 15px 30px;
     border-radius: 50px;
+    box-shadow: 2px 1px 2px rgb(163, 163, 163);
+
+    &__one {
+        background-color: $color-accent-2;
+    }
 }
+
 
 .hero1 {
     max-width: 100%;
@@ -50,7 +101,7 @@ p {
     &__container {
         max-width: 800px;
         min-height: 500px;
-        background-color: rgb(43, 43, 38);
+        // background-color: rgb(43, 43, 38);
         margin: 0px auto;
     }
 }
@@ -58,20 +109,63 @@ p {
     text-align: center;
     margin: 0px 10px;
 
+    @include media-query(mobile) {
+        padding: 0px 25px;
+    }
+
+    &__logo {
+        @include media-query(mobile) {
+            width: 4px;
+        }
+    }
+
     &__area1 {
         // max-width: 800px;
         min-height: 250px;
-        background-color: pink;
+        // background-color: pink;
         padding: 50px 0px;
 
         p {
             margin-top: -30px;
+
+            @include media-query(mobile) {
+                margin-top: 15px;
+            }
         }
     }
 
     &__area2 {
         // max-width: 800px;
-        min-height: 250px;
-        background-color: rgb(112, 172, 122);
+        min-height: 200px;
+        margin-top: 100px;
+        // background-color: rgb(112, 172, 122);
+
+        p {
+            padding: 0px 20px;
+
+            @include media-query(mobile) {
+                padding: 0px 0px;
+            }
+        }
+    }
+}
+.btn__container {
+    margin-top: 50px;
+
+}
+.btn__left {
+    margin-right: 7.5px;
+
+    @include media-query(mobile) {
+        display: block;
+        margin-right: 0px;
+    }
+}
+.btn__right {
+    margin-left: 7.5px;
+    @include media-query(mobile) {
+        display: block;
+        margin-left: 0px;
+        margin-top: 20px;
     }
 }
