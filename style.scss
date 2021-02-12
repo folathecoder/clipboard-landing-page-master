@@ -34,6 +34,7 @@ $color-accent-2: hsl(233, 100%, 69%);
 $color-accent-3: hsl(210, 10%, 33%);
 $color-accent-4: hsl(201, 11%, 66%);
 $color-accent-5: white;
+$color-accent-6: black;
 //font
 $font-family: 'Bai Jamjuree', sans-serif;
 //base styling 
@@ -100,6 +101,27 @@ p {
     
     @include media-query(tablet) {
         font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    @include media-query(mobile) {
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+    }
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-family: $font-family;
+    color: $color-accent-6; 
+    
+    @include media-query(tablet) {
+        font-size: 1rem;
         line-height: 1.5rem;
     }
 
@@ -365,6 +387,51 @@ p {
     &__heading {
         padding: 0px 20px;
     }
+}
+
+footer {
+    max-width: 100%;
+    background-color: red;
+    min-height: 100px;
+}
+
+.foot-container {
+    background-color: rgba(36, 167, 64, 0.411);
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0px auto;
+
+    @include media-query(mobile) {
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 0px;
+    }
+}
+.foot {
+    padding: 20px;
+
+    &__foot1, &__foot2, &__foot3, &__foot4 {
+        background-color: white;
+        flex: 1;
+        img {
+            width: 60px;
+        }
+
+        @include media-query(mobile) {
+            flex: 1 1 400px;
+        }
+    }
+    &__foot5 {
+        background-color:pink;
+        flex: 2;
+        text-align: right;
+    }
+}
 
 
+.copyright {
+    background-color: gray;
+    text-align: center;
+    min-height: 50px;
 }
