@@ -99,7 +99,7 @@ a {
   line-height: 2rem;
   font-weight: 400;
   font-family: "Bai Jamjuree", sans-serif;
-  color: black;
+  color: #4c545d;
 }
 
 @media screen and (max-width: 992px) {
@@ -124,12 +124,20 @@ a {
   background-color: #26baa4;
   padding: 15px 30px;
   border-radius: 50px;
-  -webkit-box-shadow: 2px 1px 2px #a3a3a3;
-          box-shadow: 2px 1px 2px #a3a3a3;
+  -webkit-box-shadow: 2px 1px 2px #cccbcb;
+          box-shadow: 2px 1px 2px #cccbcb;
+}
+
+.btn:hover {
+  background-color: #22a591;
 }
 
 .btn__one {
   background-color: #6173ff;
+}
+
+.btn__one:hover {
+  background-color: #1430ff;
 }
 
 .hero1 {
@@ -236,14 +244,14 @@ a {
 }
 
 .hero2 {
-  max-width: 100%;
+  max-width: 1400px;
   min-height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 50px 0px;
+  margin: 50px auto;
 }
 
 .hero2__area1 {
@@ -431,28 +439,28 @@ a {
 
 footer {
   max-width: 100%;
-  background-color: red;
+  background-color: #ededed;
   min-height: 100px;
 }
 
+footer a:hover {
+  color: #26baa4;
+}
+
 .foot-container {
-  background-color: rgba(36, 167, 64, 0.411);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   max-width: 1200px;
   margin: 0px auto;
+  padding: 50px 0px 30px 0px;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 786px) {
   .foot-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     text-align: center;
-    margin: 0px;
   }
 }
 
@@ -461,35 +469,80 @@ footer {
 }
 
 .foot__foot1, .foot__foot2, .foot__foot3, .foot__foot4 {
-  background-color: white;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .foot__foot1 img, .foot__foot2 img, .foot__foot3 img, .foot__foot4 img {
   width: 60px;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 786px) {
   .foot__foot1, .foot__foot2, .foot__foot3, .foot__foot4 {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 400px;
             flex: 1 1 400px;
+    margin-top: -35px;
+  }
+  .foot__foot1 a, .foot__foot2 a, .foot__foot3 a, .foot__foot4 a {
+    padding-top: 10px;
+  }
+  .foot__foot1 img, .foot__foot2 img, .foot__foot3 img, .foot__foot4 img {
+    padding-bottom: 20px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 
 .foot__foot5 {
-  background-color: pink;
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
   text-align: right;
+  padding-top: 40px;
+}
+
+.foot__foot5 img {
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .foot__foot5 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding-top: 20px;
+  }
+  .foot__foot5 img {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .foot__foot5 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 400px;
+            flex: 1 400px;
+    text-align: center;
+  }
+  .foot__foot5 img {
+    margin-left: 20px;
+    padding-right: 10px;
+  }
 }
 
 .copyright {
-  background-color: gray;
   text-align: center;
   min-height: 50px;
+  padding: 0px 50px;
 }
 /*# sourceMappingURL=style.css.map */
